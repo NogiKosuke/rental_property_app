@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  train_line: MyText
+  station: MyText
+  closeness: MyText
+  property: one
+
+two:
+  train_line: MyText
+  station: MyText
+  closeness: MyText
+  property: two

@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_11_080046) do
+ActiveRecord::Schema.define(version: 2023_04_11_143340) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "nearest_stations", force: :cascade do |t|
+    t.text "train_line"
+    t.text "station"
+    t.text "closeness"
+    t.bigint "property_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["property_id"], name: "index_nearest_stations_on_property_id"
+  end
 
   create_table "properties", force: :cascade do |t|
     t.text "name"
@@ -25,4 +35,5 @@ ActiveRecord::Schema.define(version: 2023_04_11_080046) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "nearest_stations", "properties"
 end

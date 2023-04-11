@@ -1,1 +1,21 @@
-こんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちは
+<h1>物件一覧</h1>
+
+<table>
+  <tr>
+    <th>物件名</th>
+    <th>賃料</th>
+    <th>住所</th>
+    <th>築年数</th>
+    <th>備考</th>
+  </tr>
+
+<% @properties.each do |prt| %>
+  <tr>
+    <td><%= prt.name %></td>
+    <td><%= prt.rent %></td>
+    <td><%= prt.adress %></td>
+    <td><%= prt.age %></td>
+    <td><%= prt.remark %></td>
+  </tr>
+<% end %>
+</table>

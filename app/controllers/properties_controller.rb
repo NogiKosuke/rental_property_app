@@ -1,6 +1,6 @@
 class PropertiesController < ApplicationController
   def index
-
+    @properties = Property.all
   end
 
   def new
@@ -10,6 +10,7 @@ class PropertiesController < ApplicationController
   def create
     @property = Property.new(property_params)
     @property.save
+    redirect_to properties_path
   end
 
   private

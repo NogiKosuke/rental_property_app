@@ -18,6 +18,7 @@
     <td><%= prt.remark %></td>
     <td><%= link_to '詳細', property_path(prt.id) %></td>
     <td><%= link_to '編集', edit_property_path(prt.id) %></td>
+    <td><%= link_to '削除', property_path(prt.id), method: :delete %></td>
   </tr>
 <% end %>
 </table>

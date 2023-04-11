@@ -16,6 +16,7 @@
     <td><%= prt.adress %></td>
     <td><%= prt.age %></td>
     <td><%= prt.remark %></td>
+    <td><%= link_to '編集', edit_property_path(prt.id) %></td>
   </tr>
 <% end %>
 </table>

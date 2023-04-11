@@ -1,5 +1,3 @@
-<h1>物件登録</h1>
-
 <%= form_with(model: @property, local: true) do |f| %>
   <% if @property.errors.any? %>
     <div id="error_explanation">
@@ -12,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-  
+
   <div>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -33,5 +31,5 @@
     <%= f.label :remark %><br>
     <%= f.text_area :remark %>
   </div>
-    <%= f.submit "登録する" %>
+    <%= f.submit "編集する" %>
 <% end %>
